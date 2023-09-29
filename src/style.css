@@ -4,19 +4,57 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: monospace;
-    background: #f5f5f5;
-    justify-content: center;
-    align-items: center;
+    background: #252422;
+    color: #f0ebd8;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 
 header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    width: 800px;
+    background: #ffffff04;
+    backdrop-filter: blur(1px);
+    border-radius: 5px;
+    color: #f0ebd8;
+}
+
+@media screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    
+
+}
+
+
+header>div {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-right: 10px;
+}
+
+main {
+    padding-top: 50px;
+}
+
+
+main h1 {
+    font-size: 2rem;
 }
 
 nav ul{
@@ -30,23 +68,76 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #f0ebd8;
     font-size: 1rem;
+    font-weight: 700;
+}
+
+nav ul li a:hover {
+    text-decoration: underline 2px solid #7f5539 ;
+    color: #7f5539;
+    transition: 0.3s;
 }
 
 
 .banner {
-    padding: 100px;
+    padding: 200px;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    background-image: url(/src/images/coffeshop.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #f0ebd8;
+    font-weight: bold;
+    border-radius: 5px;
 }
+
 .about {
     padding: 20px
 }
 
+.about>div {
+    display: flex;
+    align-items: center;
+}
+
+
+.about img {
+    max-width: 30px;
+    margin-left: 10px;
+}
+
+
+
+.about h1 {
+    font-size: 1.5rem;
+}
+
+.about p {
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.about .box-text {
+    padding: 10px;
+    background: #3f3d39;
+    border-radius: 5px;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
 .work {
-    padding: 20px;
+    padding: 20px
+}
+
+.work img {
+    max-width: 300px;
+    height: 180px;
+
+}
+
+.work h1 {
+    font-size: 1.5rem;
 }
 
 .work>div {
@@ -56,10 +147,63 @@ nav ul li a {
 }
 
 .work>div>div {
-
     margin: 20px;
-    border: 1px solid black;
-    max-width: min-content;
     padding: 10px;
+    max-width: min-content;
+    
 }
+
+.work>div>div>div {
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+.work h3 a {
+    text-decoration: none;
+    color: #f0ebd8;
+    font-size: 1.2rem;
+}
+
+.contact {
+    padding: 20px;
+}
+
+
+.contact>div {
+    padding: 20px;
+}
+
+.contact>div>div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contact img {
+    margin-left: 10px;
+}
+
+.contact button {
+    border: none;
+    background: none;
+    color: #f0ebd8;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 1rem;
+}
+
+footer img {
+    max-width: 30px;
+    margin-left: 10px;
+}
+
 
